@@ -4,7 +4,7 @@ s=sudo
 
 $s yum update -y
 if [ $? = 0 ];then
-  echo "update finished successfullu!"
+  echo "updated successfully!"
 else
   echo "update aborted! Something went wrong!"
 fi
