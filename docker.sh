@@ -19,6 +19,8 @@ $s curl -L "https://github.com/docker/compose/releases/download/1.24.1/docker-co
 $s chmod +x /usr/local/bin/docker-compose
 $s ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 $s groupadd docker
+$s usermod -aG docker $USER
+$s groups $USER
 $s systemctl restart docker
 $s gpasswd -a $USER docker
 $s systemctl status docker
